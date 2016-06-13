@@ -4991,13 +4991,14 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+      padding: 2px 0;
+    /*padding-top: 48px;
+    padding-bottom: 48px;*/
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 22px;
+    padding-right: 2px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
