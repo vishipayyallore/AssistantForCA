@@ -1,0 +1,62 @@
+﻿@using System;
+@{
+    var applicationName = "Charter Accountants";
+    var applicationVersion = "1.0.0.1";
+    var developedBy = "Sri Krsna Software Solutions";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - applicationName</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css"/>
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/slate/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(applicationName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*@if (Request.IsAuthenticated)*@
+                    @*{*@
+                        <li>@Html.ActionLink("Clients List", "Index", "Client")</li>
+                        <li>@Html.ActionLink("Clients Files", "Index", "ClientFiles")</li>
+                    @*}*@
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <hr class="hr-layout" />
+        <div class="float-left">
+            <p>&copy; @DateTime.Now.Year - @developedBy (Version @applicationVersion).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

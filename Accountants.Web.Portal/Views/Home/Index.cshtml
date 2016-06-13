@@ -1,0 +1,116 @@
+﻿@*@using System.Configuration*@
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h4>CA Assistant helps associates at Charter Accountants.</h4>
+</div>
+
+@*@if (!Request.IsAuthenticated)
+{*@
+    <div class="row">
+        <div class="alert alert-dismissable alert-info">
+            <button class="close" type="button" data-dismiss="alert">×</button>
+            <strong>Heads up! Please Register and Login, to avail all features.</strong>
+        </div>
+    </div>
+@*}*@
+<div class="row">
+    <div class="col-md-4">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Associates</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>Feature</th>
+                        <th>&nbsp;</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-primary">Feature 1</span></td>
+                        <td></td>
+                        <td>Feature 1 Description.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-primary">Feature 2</span></td>
+                        <td></td>
+                        <td>Feature 2 Description.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-primary">Feature 3</span></td>
+                        <td></td>
+                        <td>Feature 3 Description.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">CA Administrator</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>Feature</th>
+                        <th>&nbsp;</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info">Feature 1</span></td>
+                        <td></td>
+                        <td>Feature 1 Description.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info">Feature 2</span></td>
+                        <td></td>
+                        <td>Feature 2 Description.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info">Feature 3</span></td>
+                        <td></td>
+                        <td>Feature 3 Description.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Other Features ...</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>Feature</th>
+                        <th>&nbsp;</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-success">Tracing</span></td>
+                        <td></td>
+                        <td>All the actions of the users will be tracked.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-success">Approval</span></td>
+                        <td></td>
+                        <td>Approving the associates</td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-success">Reporting</span></td>
+                        <td></td>
+                        <td>Users and Administrators will be able to view the reports.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
