@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - @ApplicationDetails.Name</title>
+    <title>@ViewData["Title"] - @applicationName</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css"/>
@@ -57,7 +57,7 @@
     <footer>
         <hr class="hr-layout" />
         <div class="float-left">
-            <p>&copy; @DateTime.Now.Year - @ApplicationDetails.DevelopedBy (Version @ApplicationDetails.VersionNumber).</p>
+            <p>&copy; @DateTime.Now.Year - @developedBy (Version @applicationVersion).</p>
         </div>
     </footer>
 
