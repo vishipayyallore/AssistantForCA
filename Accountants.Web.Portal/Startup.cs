@@ -27,6 +27,10 @@ namespace Accountants.Web.Portal
 
             services.Configure<ApplicationDetails>(Configuration.GetSection("ApplicationDetails"));
 
+            services.AddSingleton<IConfiguration>(_ => Configuration);
+            //services.AddSingleton<IConfiguration>(provider => Configuration);
+            //services.AddSingleton<IConfiguration>(Configuration);
+
             // Add framework services.
             services.AddMvc();
             

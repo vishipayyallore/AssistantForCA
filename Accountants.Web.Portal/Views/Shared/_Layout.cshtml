@@ -1,10 +1,15 @@
 ﻿@using System;
-@using Accountants.Web.Portal.ViewModels
+@using Microsoft.Extensions.Configuration;
+@using Accountants.Web.Portal.ViewModels;
+
+@inject IConfiguration config;
+
 @{
     var applicationName = "Charter Accountants";
     var applicationVersion = "1.0.0.1";
     var developedBy = "Sri Krsna Software Solutions";
 
+    var aaa = config.GetValue<string>("ApplicationDetails:Name");
     //var applicationDetails = new ApplicationDetails();
 }
 
@@ -13,7 +18,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - @applicationName</title>
+    <title>@ViewData["Title"] -  @aaa </title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css"/>
