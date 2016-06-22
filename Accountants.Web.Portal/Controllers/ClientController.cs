@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Accountants.Web.Portal.Controllers
 {
-    public class Client : Controller
+    public class ClientController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
