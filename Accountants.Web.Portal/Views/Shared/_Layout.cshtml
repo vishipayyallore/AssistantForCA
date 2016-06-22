@@ -2,9 +2,14 @@
 @using Microsoft.AspNetCore.Mvc.Razor
 @using Microsoft.Extensions.Configuration;
 @using Accountants.Web.Portal.ViewModels;
+@using Microsoft.Extensions.Options;
 
+<!--Using the Configuration-->
 @inject IConfiguration _configuration;
-@inject ApplicationDetails applicationDetails;
+
+<!--Strongly Typed Configuration Settings in ASP.NET Core -->
+@inject IOptions<ApplicationDetails> AppSettings
+
 
 @{
     var applicationName = _configuration["ApplicationDetails:Name"];

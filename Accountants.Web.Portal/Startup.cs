@@ -37,6 +37,7 @@ namespace Accountants.Web.Portal
             //services.AddSingleton<IConfiguration>(_ => Configuration);
             //services.AddSingleton(new ApplicationDetails());
             //services.AddSingleton<IConfiguration>(provider => Configuration);
+            //services.AddSingleton<ApplicationDetails>(Configuration.GetSection("ApplicationDetails") as ApplicationDetails);
             services.AddSingleton<IConfiguration>(Configuration);
 
         }
