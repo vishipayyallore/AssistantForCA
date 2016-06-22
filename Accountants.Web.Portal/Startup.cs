@@ -24,16 +24,21 @@ namespace Accountants.Web.Portal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.Configure<ApplicationDetails>(Configuration.GetSection("ApplicationDetails"));
-
-            services.AddSingleton<IConfiguration>(_ => Configuration);
-            //services.AddSingleton<IConfiguration>(provider => Configuration);
-            //services.AddSingleton<IConfiguration>(Configuration);
-
             // Add framework services.
             services.AddMvc();
-            
+
+            // Add functionality to inject IOptions<T>
+            services.AddOptions();
+
+            // Add our Config object so it can be injected
+            services.Configure<ApplicationDetails>(Configuration.GetSection("ApplicationDetails"));
+
+            // *If* you need access to generic IConfiguration this is **required**
+            //services.AddSingleton<IConfiguration>(_ => Configuration);
+            //services.AddSingleton(new ApplicationDetails());
+            //services.AddSingleton<IConfiguration>(provider => Configuration);
+            services.AddSingleton<IConfiguration>(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

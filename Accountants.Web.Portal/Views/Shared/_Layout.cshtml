@@ -1,16 +1,15 @@
 ﻿@using System;
+@using Microsoft.AspNetCore.Mvc.Razor
 @using Microsoft.Extensions.Configuration;
 @using Accountants.Web.Portal.ViewModels;
 
-@inject IConfiguration config;
+@inject IConfiguration _configuration;
+@inject ApplicationDetails applicationDetails;
 
 @{
-    var applicationName = "Charter Accountants";
-    var applicationVersion = "1.0.0.1";
-    var developedBy = "Sri Krsna Software Solutions";
-
-    var aaa = config.GetValue<string>("ApplicationDetails:Name");
-    //var applicationDetails = new ApplicationDetails();
+    var applicationName = _configuration["ApplicationDetails:Name"];
+    var applicationVersion = _configuration["ApplicationDetails:VersionNumber"];
+    var developedBy = _configuration["ApplicationDetails:DevelopedBy"];
 }
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] -  @aaa </title>
+    <title>@ViewData["Title"] - @applicationName </title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css"/>
