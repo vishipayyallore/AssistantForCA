@@ -6,5 +6,4 @@
     //Creating the Module
     angular.module("AssistantForCA", []);
 
-    alert('Hi Man!');
 })();
