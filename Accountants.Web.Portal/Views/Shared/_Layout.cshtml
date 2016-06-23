@@ -5,16 +5,16 @@
 @using Microsoft.Extensions.Options;
 
 <!--Using the Configuration-->
-@inject IConfiguration _configuration;
+@*@inject IConfiguration _configuration;*@
 
 <!--Strongly Typed Configuration Settings in ASP.NET Core -->
-@inject IOptions<ApplicationDetails> AppSettings
+@inject IOptions<ApplicationDetails> applicationDetails
 
 
 @{
-    var applicationName = _configuration["ApplicationDetails:Name"];
-    var applicationVersion = _configuration["ApplicationDetails:VersionNumber"];
-    var developedBy = _configuration["ApplicationDetails:DevelopedBy"];
+    var applicationName = applicationDetails.Value.Name;
+    var applicationVersion = applicationDetails.Value.VersionNumber;
+    var developedBy = applicationDetails.Value.DevelopedBy;
 }
 
 <!DOCTYPE html>
