@@ -19,13 +19,13 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+<head ng-app="AssistantForCA">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - @applicationName </title>
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css"/>
+        <link rel="stylesheet" href="~/lib/bootswatch/slate/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment names="Staging,Production">
@@ -50,8 +50,8 @@
                 <ul class="nav navbar-nav">
                     @*@if (Request.IsAuthenticated)*@
                     @*{*@
-                        <li>@Html.ActionLink("Clients", "Index", "Client")</li>
-                        <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
+                    <li>@Html.ActionLink("Clients", "Index", "Client")</li>
+                    <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
                     @*}*@
                     <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                 </ul>
@@ -60,9 +60,10 @@
         </div>
     </div>
     <div class="container body-content">
+        <div>Total: </div>
         @RenderBody()
     </div>
-
+    
     <footer>
         <hr class="hr-layout" />
         <div class="float-left">
@@ -70,5 +71,15 @@
         </div>
     </footer>
 
+    <environment names="Development">
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+        <script src="~/lib/angular/angular.js"></script>
+        <script src="~/lib/angular-route/angular-route.js"></script>
+
+        <script src="~/app/AssistantForCA.js"></script>
+    </environment>
+
 </body>
 </html>
+
