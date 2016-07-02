@@ -36,15 +36,18 @@
     </environment>
 </head>
 <body>
-    <div id="sidebar">
-        <ul class="nav">
-            <li class="active"><a asp-controller="App" asp-action="Index">Home</a></li>
-            <li><a asp-controller="App" asp-action="About">About</a></li>
-            <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
-                <li><a asp-controller="App" asp-action="Trips">My Trips</a></li>
-                <li><a asp-controller="Auth" asp-action="Logout">Logout</a></li>
-        </ul>
+<div id="sidebar">
+    <div class="center-block">
+        <img src="~/images/PSM.png" alt="headshot" class="headshot" />
     </div>
+    <ul class="nav">
+        <li class="active"><a asp-controller="App" asp-action="Index">Home</a></li>
+        <li><a asp-controller="App" asp-action="About">About</a></li>
+        <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+        <li><a asp-controller="App" asp-action="Trips">My Trips</a></li>
+        <li><a asp-controller="Auth" asp-action="Logout">Logout</a></li>
+    </ul>
+</div>
 
     <div id="wrapper">
 

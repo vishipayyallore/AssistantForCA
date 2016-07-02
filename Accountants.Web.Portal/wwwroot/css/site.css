@@ -43,9 +43,11 @@ textarea {
   }
 
 .headshot {
-  max-width: 50px;
+  max-width: 70px;
   border: 1px solid #222;
   padding: 3px;
+    margin-left: 15Px;
+    margin-top: 10Px;
 }
 
 .menu {
