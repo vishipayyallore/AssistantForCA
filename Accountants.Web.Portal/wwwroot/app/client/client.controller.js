@@ -7,12 +7,12 @@
         .controller('ClientController', clientController);
 
 
-    clientController.$inject = ['$http'];
+    //clientController.$inject = ['$http'];
 
-    function clientController($http) {
+    function clientController() {
         var vm = this;
 
-        alert('Hi Man!');
+        alert('Hi Man from Client Controller!');
     }
 
 })();
