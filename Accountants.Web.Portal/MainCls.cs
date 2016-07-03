@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Accountants.Web.Portal
 {
-    public class Program
+    public class MainCls
     {
         public static void Main(string[] args)
         {
