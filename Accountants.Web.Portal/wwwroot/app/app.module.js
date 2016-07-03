@@ -4,6 +4,6 @@
 (function () {
 
     //Creating the Module
-    angular.module("AssistantForCAApp", ["AssistantForCAApp.controller", "ui.router"]);
+    angular.module("AssistantForCAApp", ["ui.router"]);
 
 })();

@@ -3,11 +3,8 @@
 "use strict";
 
 (function() {
-    angular.module("AssistantForCAApp.controllers", [])
+    angular.module("AssistantForCAApp")
         .controller("ClientController", ClientController);
-
-
-    //clientController.$inject = ['$http'];
 
     function ClientController() {
         var vm = this;
