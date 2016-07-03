@@ -9,12 +9,12 @@
 
     function initializeRouters($stateProvider, $locationProvider, $urlRouterProvider) {
         //alert("Hi Man!");
-        //$locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-                .state("clients", {
-                        url: "/clients",
+                .state("client", {
+                        url: "/Client",
                         templateUrl: "app/client/index.html",
                         controller: "ClientController",
                         controllerAs: "vm"

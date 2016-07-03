@@ -78,13 +78,15 @@
                 </div>
         </div>
         <div class="container body-content">
-            <div>Total: Nothing here {{'yet' + '!'}}</div>
+            
             @*<div>Total: Nothing here {{'yet' + '!'}}</div>
             <div ng-init="personName='John Doe'">
                 <input ng-model="personName" /> {{personName}}
             </div>*@
 
             @RenderBody()
+
+            <div>Total: {{'AngularJS' + '!'}}</div>
         </div>
 
         <footer>
@@ -105,7 +107,7 @@
     <!--Application Specific JS files-->
     <script src="~/app/app.module.js"></script>
     <script src="~/app/app.config.js"></script>
-    <script src="~/app/client/client.module.js"></script>
+    @*<script src="~/app/client/client.module.js"></script>*@
     <script src="~/app/client/client.controller.js"></script>
     
     @RenderSection("scripts", required: false);

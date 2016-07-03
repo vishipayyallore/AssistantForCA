@@ -7,7 +7,6 @@
 /// <reference path="app/Config.js" />
 /// <reference path="js/site.js" />
 /// <reference path="lib/angular/angular.js" />
-/// <reference path="lib/angular-route/angular-route.js" />
 /// <reference path="lib/angular-ui-router/release/angular-ui-router.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
 /// <reference path="lib/jquery/dist/jquery.js" />

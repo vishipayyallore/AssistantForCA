@@ -1,18 +1,23 @@
 ﻿// client.controller.js
 
-'use strict';
+"use strict";
 
 (function() {
-    angular.module("AssistantForCAApp.client.controllers", [])
-        .controller('ClientController', clientController);
+    angular.module("AssistantForCAApp.controllers", [])
+        .controller("ClientController", ClientController);
 
 
     //clientController.$inject = ['$http'];
 
-    function clientController() {
+    function ClientController() {
         var vm = this;
 
-        alert('Hi Man from Client Controller!');
+        activate();
+
+        function activate() {
+            alert("Hi Man from Client Controller!");
+        }
+        
     }
 
 })();
