@@ -1,22 +1,17 @@
-﻿// client.controller.js
+﻿(function () {
+    'use strict';
 
-"use strict";
+    angular
+        .module('app')
+        .controller('ClientController', ClientController);
 
-(function() {
-    angular.module("app")
-        .controller("clientController", clientController);
 
-    function clientController() {
+    function ClientController() {
         var vm = this;
 
-        vm.isBusy = true;
-        //$scope.userUpn = "Swamy";
+
         activate();
 
-        function activate() {
-            alert("Client Controller!");
-        }
-        
+        function activate() { }
     }
-
 })();
