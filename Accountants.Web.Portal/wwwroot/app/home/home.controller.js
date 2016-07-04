@@ -1,17 +1,19 @@
 (function() {
-'use strict';
+"use strict";
 
     angular
-        .module('app')
-        .controller('HomeController', HomeController);
+        .module("app")
+        .controller("HomeController", homeController);
 
-
-    function HomeController() {
+    function homeController() {
         var vm = this;
-
 
         activate();
 
-        function activate() { }
+        function activate() {
+            
+        }
+
     }
+
 })();
