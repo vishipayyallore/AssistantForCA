@@ -1,9 +1,7 @@
-﻿//AssistantForCA.js
-"use strict";
+(function() {
+    'use strict';
 
-(function () {
+    angular.module('app', ['ui.router'
 
-    //Creating the Module
-    angular.module("AssistantForCAApp", ["ui.router"]);
-
+    ]);
 })();

@@ -4,6 +4,6 @@
 (function () {
 
     //Creating the Module
-    angular.module("AssistantForCAApp.client", ["AssistantForCAApp.client.controllers"]);
+    angular.module("app.client", ["AssistantForCAApp.client.controllers"]);
 
 })();

@@ -39,15 +39,14 @@
     "html5shiv": "~3.7.0",
     "respond": "~1.4.2"
   },
-  "version": "3.3.6",
-  "_release": "3.3.6",
+  "version": "3.3.6+2",
+  "_release": "3.3.6+2",
   "_resolution": {
     "type": "version",
-    "tag": "v3.3.6",
-    "commit": "4db5bf22ea130613ed0080981814db45fa27997c"
+    "tag": "v3.3.6+2",
+    "commit": "a78dc3aed640a35914361b837ce24573a0515e19"
   },
   "_source": "https://github.com/thomaspark/bootswatch.git",
-  "_target": "3.3.6",
-  "_originalSource": "bootswatch",
-  "_direct": true
+  "_target": "3.3.6+2",
+  "_originalSource": "bootswatch"
 }

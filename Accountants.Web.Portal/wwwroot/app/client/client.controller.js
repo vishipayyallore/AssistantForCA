@@ -3,7 +3,7 @@
 "use strict";
 
 (function() {
-    angular.module("AssistantForCAApp")
+    angular.module("app")
         .controller("clientController", clientController);
 
     function clientController() {

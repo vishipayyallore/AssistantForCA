@@ -1,26 +1,20 @@
-﻿// app.config.js
-
-"use strict";
-
 (function() {
- 
-    angular.module("AssistantForCAApp")
-        .config(["$stateProvider", "$locationProvider", "$urlRouterProvider", initializeRouters]);
+    'use strict';
 
-    function initializeRouters($stateProvider, $locationProvider, $urlRouterProvider) {
-        $locationProvider.html5Mode(false);
-        $urlRouterProvider.otherwise("/");
+    angular.module('app')
+    .config(initrouter);
 
+    function initrouter($stateProvider, $locationProvider, $urlRouterProvider){
+        $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/');
         $stateProvider
-                .state("clients", {
-                        url: "/clients",
-                        templateUrl: "/app/client/index.html",
-                        controller: "clientController",
-                        controllerAs: "vm"
-                    }
-                );
-
-        
+            .state(
+                'home', {
+                    url: '/',
+                    templateUrl: 'app/home.html',
+                    controller: 'HomeController',
+                    controllerAs: 'vm'
+                }
+            );
     }
-
 })();

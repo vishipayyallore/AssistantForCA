@@ -18,12 +18,12 @@
 }
 
 <!DOCTYPE html>
-<html ng-app="AssistantForCAApp">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - @applicationName </title>
-
+    <base href="/">
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootswatch/darkly/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -78,15 +78,7 @@
                 </div>
         </div>
         <div class="container body-content">
-            
-            @*<div>Total: Nothing here {{'yet' + '!'}}</div>
-            <div ng-init="personName='John Doe'">
-                <input ng-model="personName" /> {{personName}}
-            </div>*@
-
             @RenderBody()
-
-            <div>Total: {{'AngularJS' + '!'}}</div>
         </div>
 
         <footer>
@@ -98,8 +90,22 @@
     </div>
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+        
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+        
+    </script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+</environment>
 
     <script src="~/lib/angular/angular.js"></script>
     <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
@@ -107,8 +113,7 @@
     <!--Application Specific JS files-->
     <script src="~/app/app.module.js"></script>
     <script src="~/app/app.config.js"></script>
-    @*<script src="~/app/client/client.module.js"></script>*@
-    <script src="~/app/client/client.controller.js"></script>
+    <script src="~/app/home.controller.js"></script>
     
     @RenderSection("scripts", required: false);
 </body>
