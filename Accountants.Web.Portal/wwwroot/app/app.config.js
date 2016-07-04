@@ -5,21 +5,22 @@
 (function() {
  
     angular.module("AssistantForCAApp")
-        .config(initializeRouters);
+        .config(["$stateProvider", "$locationProvider", "$urlRouterProvider", initializeRouters]);
 
     function initializeRouters($stateProvider, $locationProvider, $urlRouterProvider) {
+        $locationProvider.html5Mode(false);
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-                .state("client", {
-                        url: "/Client",
+                .state("clients", {
+                        url: "/clients",
                         templateUrl: "/app/client/index.html",
-                        controller: "ClientController",
+                        controller: "clientController",
                         controllerAs: "vm"
                     }
                 );
 
-        $locationProvider.html5Mode(false);
+        
     }
 
 })();

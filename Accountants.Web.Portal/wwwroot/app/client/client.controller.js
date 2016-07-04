@@ -4,15 +4,17 @@
 
 (function() {
     angular.module("AssistantForCAApp")
-        .controller("ClientController", ClientController);
+        .controller("clientController", clientController);
 
-    function ClientController() {
+    function clientController() {
         var vm = this;
 
+        vm.isBusy = true;
+        //$scope.userUpn = "Swamy";
         activate();
 
         function activate() {
-            alert("Hi Man from Client Controller!");
+            alert("Client Controller!");
         }
         
     }
