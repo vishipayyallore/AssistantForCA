@@ -1,0 +1,135 @@
+﻿<wait-cursor display-when="vm.isBusy"></wait-cursor>
+
+<div class="panel panel-default">
+    
+    <form novalidate name="addNewClient" class="form-horizontal" role="form" ng-submit="vm.addNewClient()">
+        <!-- Default panel contents -->
+        <div style="margin-top: 5Px" class="panel-heading">
+            <a href="/Client" class="btn btn-xs btn-info"><i class="fa fa-home" aria-hidden="true"></i> Home</a> |
+            <a href="" ng-click="vm.addNewClient()" class="btn btn-xs btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a> |
+            <a href="/Client" class="btn btn-xs btn-warning"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
+            <!--<div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">-->
+            <!--<button type="button" class="btn btn-info btn-sm"><i class="fa fa-home" aria-hidden="true"></i> Home</button> |-->
+            <!--<div style="margin-top: 5Px" class="panel-heading">
+                <a href="/Client" class="btn btn-xs btn-info"><i class="fa fa-home" aria-hidden="true"></i> Home</a>&nbsp;
+            </div>-->
+            <!--<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button> |
+            <button type="reset" class="btn btn-warning btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button>-->
+            <!--</div>
+            </div>-->
+        </div>
+        <table class="table-condensed table-striped table-hover">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="fileNumber" class="col-sm-6 control-label">File Number</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="fileNumber" ng-model="vm.newClient.fileNumber" placeholder="File Number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="fullName" class="col-sm-6 control-label">Name</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="fullName" ng-model="vm.newClient.fullName" placeholder="Name">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="fatherFullName" class="col-sm-6 control-label">Father's Name</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="fatherFullName" ng-model="vm.newClient.fatherFullName" placeholder="Father's Name">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="panNumber" class="col-sm-6 control-label">PAN</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="panNumber" ng-model="vm.newClient.panNumber" placeholder="PAN">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="natureOfBusiness" class="col-sm-6 control-label">Nature Of Business</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="natureOfBusiness" ng-model="vm.newClient.natureOfBusiness" placeholder="Nature Of Business">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="clientType" class="col-sm-6 control-label">Client Type</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="clientType" ng-model="vm.newClient.clientType" placeholder="Client Type">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="currentYearStatus" class="col-sm-6 control-label">Current Year Status</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="currentYearStatus" ng-model="vm.newClient.currentYearStatus" placeholder="Current Year Status">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="telephone" class="col-sm-6 control-label">Telephone</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="telephone" ng-model="vm.newClient.telephone" placeholder="Telephone">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="lastFilingYear" class="col-sm-6 control-label">Last Filing Year</label>
+                        <div class="col-sm-6">
+                            <!--<input class="form-control input-sm" id="lastFilingYear" ng-model="vm.newClient.lastFilingYear" placeholder="Last Filing Year">-->
+                            <select class="form-control input-sm" name="lastFilingYear" id="lastFilingYear" ng-model="vm.newClient.lastFilingYear" ng-options="selectedYear.id as selectedYear.desc for selectedYear in vm.lastFilingYears">
+                                <option value="">Select ---</option>    
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="landLinePhone" class="col-sm-6 control-label">Land Line</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="landLinePhone" ng-model="vm.newClient.landLinePhone" placeholder="Land Line">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="emailId" class="col-sm-6 control-label">Email Id</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="emailId" ng-model="vm.newClient.emailId" placeholder="Email Id">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label for="resouceName" class="col-sm-6 control-label">Resouce Name</label>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm" id="resouceName" ng-model="vm.newClient.resouceName" placeholder="Resouce Name">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>

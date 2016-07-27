@@ -1,0 +1,16 @@
+﻿/// <autosync enabled="true" />
+/// <reference path="../gulpfile.js" />
+/// <reference path="app/app.config.js" />
+/// <reference path="app/app.module.js" />
+/// <reference path="app/client/app - copy.config.js" />
+/// <reference path="app/client/client.controller.js" />
+/// <reference path="app/client/client.module.js" />
+/// <reference path="app/home/home.controller.js" />
+/// <reference path="app/home/home.module.js" />
+/// <reference path="app/sharedjs/waitcontrol.js" />
+/// <reference path="js/site.js" />
+/// <reference path="lib/angular/angular.js" />
+/// <reference path="lib/angular-ui-router/release/angular-ui-router.js" />
+/// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
+/// <reference path="lib/jquery/dist/jquery.js" />
+/// <reference path="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
