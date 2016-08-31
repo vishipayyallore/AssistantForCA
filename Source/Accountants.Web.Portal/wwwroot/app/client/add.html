@@ -2,10 +2,10 @@
 
 <div class="panel panel-default">
     
-    <form novalidate name="addNewClient" class="form-horizontal" role="form" ng-submit="vm.addNewClient()">
+    <form novalidate name="addNewClient" class="form-horizontal" role="form">
         <!-- Default panel contents -->
         <div style="margin-top: 5Px" class="panel-heading">
-            <a href="/Client" class="btn btn-xs btn-info"><i class="fa fa-home" aria-hidden="true"></i> Home</a> |
+            <a href="/Client" class="btn btn-xs btn-info"><i class="fa fa-users" aria-hidden="true"></i> Clients List</a> |
             <a href="" ng-click="vm.addNewClient()" class="btn btn-xs btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a> |
             <a href="/Client" class="btn btn-xs btn-warning"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
             <!--<div class="form-group">
@@ -68,7 +68,10 @@
                     <div class="form-group">
                         <label for="clientType" class="col-sm-6 control-label">Client Type</label>
                         <div class="col-sm-6">
-                            <input class="form-control input-sm" id="clientType" ng-model="vm.newClient.clientType" placeholder="Client Type">
+                            <!--<input class="form-control input-sm" id="clientType" ng-model="vm.newClient.clientType" placeholder="Client Type">-->
+                            <select class="form-control input-sm" name="clientType" id="clientType" ng-model="vm.newClient.clientType" ng-options="clientTyp.id as clientTyp.desc for clientTyp in vm.clientTypes">
+                                <option value="">Select ---</option>
+                            </select>
                         </div>
                     </div>
                 </td>
@@ -78,13 +81,16 @@
                     <div class="form-group">
                         <label for="currentYearStatus" class="col-sm-6 control-label">Current Year Status</label>
                         <div class="col-sm-6">
-                            <input class="form-control input-sm" id="currentYearStatus" ng-model="vm.newClient.currentYearStatus" placeholder="Current Year Status">
+                            <!--<input class="form-control input-sm" id="currentYearStatus" ng-model="vm.newClient.currentYearStatus" placeholder="Current Year Status">-->
+                            <select class="form-control input-sm" name="currentYearStatus" id="currentYearStatus" ng-model="vm.newClient.currentYearStatus" ng-options="currentStatus.id as currentStatus.desc for currentStatus in vm.currentYearStatus">
+                                <option value="">Select ---</option>
+                            </select>
                         </div>
                     </div>
                 </td>
                 <td>
                     <div class="form-group">
-                        <label for="telephone" class="col-sm-6 control-label">Telephone</label>
+                        <label for="telephone" class="col-sm-6 control-label">Mobile</label>
                         <div class="col-sm-6">
                             <input class="form-control input-sm" id="telephone" ng-model="vm.newClient.telephone" placeholder="Telephone">
                         </div>
@@ -92,7 +98,7 @@
                 </td>
                 <td>
                     <div class="form-group">
-                        <label for="lastFilingYear" class="col-sm-6 control-label">Last Filing Year</label>
+                        <label for="lastFilingYear" class="col-sm-6 control-label">Last Filed AY</label>
                         <div class="col-sm-6">
                             <!--<input class="form-control input-sm" id="lastFilingYear" ng-model="vm.newClient.lastFilingYear" placeholder="Last Filing Year">-->
                             <select class="form-control input-sm" name="lastFilingYear" id="lastFilingYear" ng-model="vm.newClient.lastFilingYear" ng-options="selectedYear.id as selectedYear.desc for selectedYear in vm.lastFilingYears">
@@ -123,7 +129,10 @@
                     <div class="form-group">
                         <label for="resouceName" class="col-sm-6 control-label">Resouce Name</label>
                         <div class="col-sm-6">
-                            <input class="form-control input-sm" id="resouceName" ng-model="vm.newClient.resouceName" placeholder="Resouce Name">
+                            <!--<input class="form-control input-sm" id="resouceName" ng-model="vm.newClient.resouceName" placeholder="Resouce Name">-->
+                            <select class="form-control input-sm" name="resouceName" id="resouceName" ng-model="vm.newClient.resouceName" ng-options="resource.id as resource.desc for resource in vm.resourceNames">
+                                <option value="">Select ---</option>
+                            </select>
                         </div>
                     </div>
                 </td>

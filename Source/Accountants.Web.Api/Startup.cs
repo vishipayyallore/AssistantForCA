@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Accountants.Data.Store;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace Accountants.Web.Api
 {
@@ -25,6 +27,9 @@ namespace Accountants.Web.Api
         {
             // Add framework services.
             services.AddMvc();
+
+            const string connection = @"Server=(localdb)\mssqllocaldb;Database=psmca;Trusted_Connection=True;";
+            services.AddDbContext<AccountantsDbContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

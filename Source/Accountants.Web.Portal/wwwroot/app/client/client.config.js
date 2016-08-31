@@ -16,7 +16,23 @@
                     controller: "ClientController",
                     controllerAs: "vm"
                 }
+            )
+            .state(
+                "viewclient", {
+                    url: "/ViewClient/:clientId",
+                    templateUrl: "app/client/view.html",
+                    controller: "ClientController",
+                    controllerAs: "vm"
+                }
             );
+        //.state(
+        //    "editclient", {
+        //        url: "/EditClient/:clientId",
+        //        templateUrl: "app/client/edit.html",
+        //        controller: "ClientController",
+        //        controllerAs: "vm"
+        //    }
+        //);
     }
 
 })();

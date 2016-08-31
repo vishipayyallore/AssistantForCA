@@ -24,9 +24,16 @@ namespace Accountants.Web.Portal.Controllers.Api
         public JsonResult Get()
         {
             var clientsList = _dbContext.Clients.OrderBy(t => t.FullName).ToList();
-            //var results = clientsList.ToList();
 
             return Json(clientsList);
+        }
+
+        [HttpGet("{clientId}")]
+        public JsonResult Get(string clientId)
+        {
+            var clientDetails = _dbContext.Clients.FirstOrDefault(client => client.Id == clientId);
+
+            return Json(clientDetails);
         }
 
         public JsonResult Post(string tripName, [FromBody] ClientViewModel vm)
